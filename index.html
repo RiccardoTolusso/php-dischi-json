@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+
+</head>
+
+<body class="bg-dark text-light">
+
+    <div id="app">
+        <ul>
+            <li v-for="disk in disks">
+                <h2>{{ disk.title }}</h2>
+                <p>{{ disk.artist }}</p>
+                <h3>{{ disk.year }}</h3>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- vue -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <!-- custom js -->
+    <script src="main.js"></script>
+
+</body>
+
+</html>

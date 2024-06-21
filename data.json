@@ -1,0 +1,38 @@
+[
+    {
+        "title": "New Jersey",
+        "artist": "Bon Jovi",
+        "year": "1988",
+        "photo": "picture_url"
+    },
+    {
+        "title": "Live At Wembly 86",
+        "artist": "Queen",
+        "year": "1992",
+        "photo": "picture_url"
+    },
+    {
+        "title": "Ten\"s Summoner\"s Tales",
+        "artist": "Sting",
+        "year": "1993",
+        "photo": "picture_url"
+    },
+    {
+        "title": "Steve Gadd Band",
+        "artist": "Steve Gadd Band",
+        "year": "2018",
+        "photo": "picture_url"
+    },
+    {
+        "title": "Brave New World",
+        "artist": "Iron Maiden",
+        "year": "2000",
+        "photo": "picture_url"
+    },
+    {
+        "title": "One more car one more rider",
+        "artist": "Eric Clapton",
+        "year": "2002",
+        "photo": "picture_url"
+    }
+]
