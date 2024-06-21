@@ -1,3 +1,41 @@
+:root{
+    --primary-color: #1D2D3C;
+    --secondary-color: #06131F;
+    --text-color: #ffff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
 body{
-    background-color: rgb(33, 33, 33);
+    background-color: var(--primary-color);   
+}
+
+.container{
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+li{
+    width: calc(100%/3 - 20px);
+    background-color: var(--secondary-color);
+    padding: 20px;
+    text-align: center;
+    color: var(--text-color);
 }

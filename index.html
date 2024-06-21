@@ -13,13 +13,15 @@
 <body class="bg-dark text-light">
 
     <div id="app">
-        <ul>
-            <li v-for="disk in disks">
-                <h2>{{ disk.title }}</h2>
-                <p>{{ disk.artist }}</p>
-                <h3>{{ disk.year }}</h3>
-            </li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li v-for="disk in disks">
+                    <h2>{{ disk.title }}</h2>
+                    <p>{{ disk.artist }}</p>
+                    <h3>{{ disk.year }}</h3>
+                </li>
+            </ul>
+        </div>
     </div>
 
 
