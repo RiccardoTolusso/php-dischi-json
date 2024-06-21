@@ -13,9 +13,15 @@
 <body class="bg-dark text-light">
 
     <div id="app">
+        <div class="overlay" v-if="diskInfo !== null">
+            <img :src="diskInfo.photo" alt="selected disk album">
+            <h2>{{ disk.title }}</h2>
+            <p>{{ disk.artist }}</p>
+            <h3>{{ disk.year }}</h3>
+        </div>
         <div class="container">
             <ul>
-                <li v-for="disk in disks">
+                <li v-for="disk in disks" @click="() => getDiskInfo(disk.id)">
                     <img :src="disk.photo" :alt="`album cover - ${disk.title}`">
                     <h2>{{ disk.title }}</h2>
                     <p>{{ disk.artist }}</p>
