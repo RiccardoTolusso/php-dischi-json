@@ -1,5 +1,7 @@
 <?php
-$json_string = file_get_contents("data.json");
+$database_file = __DIR__ . "/data.json";
+
+$json_string = file_get_contents($database_file);
 
 $disks = json_decode($json_string, true);
 
@@ -12,6 +14,15 @@ if (!empty($_REQUEST['mode'])) {
 
         $disk_position = array_search(intval($_REQUEST['id']), array_column($disks, 'id'));
         $result = $disks[$disk_position];
+    }
+    if ($_POST['mode'] === "update") {
+        $disk = $_POST['disk'];
+        $disk_position = array_search(intval($disk['id']), array_column($disks, 'id'));
+        $disks[$disk_position] = $disk;
+
+        file_put_contents($database_file, json_encode($disks));
+
+        $result = $disks;
     }
 }
 

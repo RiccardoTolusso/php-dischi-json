@@ -8,17 +8,31 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/c3f6cda4b5.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="bg-dark text-light">
 
     <div id="app">
-        <div class="overlay" v-if="diskInfo !== null" @click="closeDiskInfo">
+        <div class="overlay" v-if="diskInfo !== null">
             <hr>
+            <div class="icons">
+                <i class="fa-regular fa-floppy-disk" @click="updateDisk" v-show="editActive"></i>
+                <i class="fa-regular fa-pen-to-square" @click="() => editActive = true" v-show="!editActive"></i>
+                <i class="fa-solid fa-xmark" @click="closeDiskInfo"></i>
+            </div>
             <img :src="diskInfo.photo" alt="selected disk album">
-            <h2>{{ diskInfo.title }}</h2>
-            <p>{{ diskInfo.artist }}</p>
-            <h3>{{ diskInfo.year }}</h3>
+            <div v-show="!editActive">
+                <h2>{{ diskInfo.title }}</h2>
+                <p>{{ diskInfo.artist }}</p>
+                <h3>{{ diskInfo.year }}</h3>
+            </div>
+            <div v-show="editActive">
+                <input type="text" v-model="editedDiskInfo.title">
+                <input type="text" v-model="editedDiskInfo.artist">
+                <input type="text" v-model="editedDiskInfo.year">
+            </div>
         </div>
         <div class="container">
             <ul>

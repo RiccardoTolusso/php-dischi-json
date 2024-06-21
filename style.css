@@ -58,7 +58,6 @@ li img{
 }
 
 .overlay img{
-    margin: 3vh 0;
     width: 30%;
 }
 
@@ -70,4 +69,26 @@ li img{
     background-color: var(--secondary-color);
     opacity: 0.9;
     z-index: -1;
+}
+
+.overlay .icons{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    font-size: 2rem;   
+}
+
+.overlay input{
+    display: block;
+    background-color: transparent;
+    color: var(--text-color);
+    margin: 0 auto;
+    border: 0;
+    border-bottom: 1px dotted var(--text-color);
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.overlay .icons *{
+    margin: 0 0.75rem;
 }
