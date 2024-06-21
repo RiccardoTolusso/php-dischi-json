@@ -13,11 +13,12 @@
 <body class="bg-dark text-light">
 
     <div id="app">
-        <div class="overlay" v-if="diskInfo !== null">
+        <div class="overlay" v-if="diskInfo !== null" @click="closeDiskInfo">
+            <hr>
             <img :src="diskInfo.photo" alt="selected disk album">
-            <h2>{{ disk.title }}</h2>
-            <p>{{ disk.artist }}</p>
-            <h3>{{ disk.year }}</h3>
+            <h2>{{ diskInfo.title }}</h2>
+            <p>{{ diskInfo.artist }}</p>
+            <h3>{{ diskInfo.year }}</h3>
         </div>
         <div class="container">
             <ul>

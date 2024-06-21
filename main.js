@@ -19,8 +19,11 @@ createApp({
                     }
                 }
             ).then(response => {
-                console.log(response)
+                this.diskInfo = response.data;
             })
+        },
+        closeDiskInfo(){
+            this.diskInfo = null;
         }
     },
     created(){
