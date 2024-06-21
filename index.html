@@ -16,6 +16,7 @@
         <div class="container">
             <ul>
                 <li v-for="disk in disks">
+                    <img :src="disk.photo" :alt="`album cover - ${disk.title}`">
                     <h2>{{ disk.title }}</h2>
                     <p>{{ disk.artist }}</p>
                     <h3>{{ disk.year }}</h3>

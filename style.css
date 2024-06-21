@@ -39,3 +39,7 @@ li{
     text-align: center;
     color: var(--text-color);
 }
+
+li img{
+    width: 16vw;
+}
